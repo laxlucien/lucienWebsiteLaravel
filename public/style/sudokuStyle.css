@@ -1,0 +1,227 @@
+body{
+    font-family: 'Alatsi', sans-serif;
+    text-align: center;
+    background-color: black;
+}
+
+.flex-div{
+	display: flex;
+	align-items: center;
+}
+
+nav{
+	padding: 10px 2%;
+	justify-content: space-between;
+	box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+	background: black;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.nav-left img{
+	height: 25px;
+	width: 25px;
+}
+
+.nav-right img{
+	height: 25px;
+	width: 25px;
+	margin-right: 25px;
+}
+
+.nav-right .user-icon{
+	width: 35px;
+	border-radius: 50%;
+	margin-right: 0;
+}
+
+.nav-left .menu-icon{
+	width: 25px;
+	height: 25px;
+	margin-right: 25px;
+}
+
+.nav-left .logo{
+	width: 35px;
+	height: 25px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+hr{
+    width: 500px;
+}
+
+#errors {
+    color: coral;
+    padding-right: 30px;
+}
+
+#timerTitle {
+    color: white;
+    padding-right: 5px;
+}
+
+#startButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#easyButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mediumButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hardButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#expertButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#notes {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#restartButton {
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#errorsTitle{
+    color: white;
+    padding-right: 5px;
+}
+
+#board{
+    width: 450px;
+    height: 450px;
+
+    margin: 0, auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 48px;
+    height: 48px;
+    border: 1px solid lightgrey;
+
+    /*text*/
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#digits{
+    width: 450px;
+    height: 50px;
+
+    margin: 0, auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.startLooks {
+    width: 148px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.notesLooks {
+    width: 148px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.number{
+    width: 44px;
+    height: 44px;
+    border: 1px solid whitesmoke;
+    margin: 2px;
+
+    /*text*/
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.number-selected {
+    background-color: gray;
+}
+
+.button-selected {
+    background-color: gray;
+}
+
+.button-deselected {
+    background-color: white;
+}
+
+.tile-start {
+    background-color: whitesmoke;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
+}
+
+#canvas1 {
+    position:absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}

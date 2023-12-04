@@ -1,6 +1,6 @@
-@extends('pages.index')
+@extends('layouts.frontendMain')
 
-@section('navBar')
+@section('content')
 
 <script src="JavaScript/mainBackground.js"></script>
 <div class="container">
