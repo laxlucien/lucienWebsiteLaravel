@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lucien's Place For Things</title>
-        <link rel="stylesheet" href="style/mainStyle.css">
+        <link rel="stylesheet" href="{{ asset('style/mainStyle.css') }}">
         <style>
             #canvas1 {
                 position: absolute;
@@ -15,7 +15,7 @@
         </style>
     </head>
     <body>
-    <canvas id="canvas1"><script src="JavaScript/otherPageBackground.js"></script></canvas>
+    <canvas id="canvas1"><script src="{{ asset('JavaScript/otherPageBackground.js') }}"></script></canvas>
 
     @include('layouts.inc.navbar')
 

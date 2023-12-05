@@ -4,7 +4,7 @@
  <!-- start of the sudoku part -->
  <center>
             <span>
-                <h1 style="color:white">Sudoku</h1>
+                <h1 style="width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">Sudoku</h1>
             </span>
             <hr>
             <table>
@@ -22,14 +22,17 @@
             <br>
             
             <!-- start button -->
-            <table>
-                <tr>
-                    <td><h2 id="errorsTitle">Errors:</h2></td>
-                    <td><h2 id="errors">0</h2></td>
-                    <td><h2 id="timerTitle">Timer:</h2></td>
-                    <td><h2 style="color: white" id="timer">00:00</h2></td>
-                </tr>
-            </table>
+            <div style="width: 30%; background-color: #27272A; padding-top:20px; border-radius: 8px;">
+                <table>
+                    <tr>
+                        <td><h2 id="errorsTitle">Errors:</h2></td>
+                        <td><h2 id="errors">0</h2></td>
+                        <td><h2 id="timerTitle">Timer:</h2></td>
+                        <td><h2 style="color: white" id="timer">00:00</h2></td>
+                    </tr>
+                </table>
+            </div>
+            <br>
             <!-- 9x9 board -->
             <div id="board"></div>
             <br>

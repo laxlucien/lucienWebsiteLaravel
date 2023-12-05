@@ -5,12 +5,12 @@
 <div>
     <center>
         <br>
-        <h1 style="color:white">About -</h1>
+        <h1 style="width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">About -</h1>
         <br>
         <table>
             <tr>
                 <center>
-                <td style="color:white">
+                <td style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
                     <center>
                     <p><h3>About -</h3></p>
                     <br>
@@ -42,7 +42,7 @@
                 <td style="width:40%">
                     <center>         
                         <!------------ Photo of lucien here --------->
-                        <img style="width:80%" src="photos/20220608_160333.jpg" alt="Lucien Profile Picture">
+                        <img style="width:80%; background-color: #27272A; padding: 10px; border-radius: 8px;" src="{{ asset('photos/20220608_160333.jpg') }}" alt="Lucien Profile Picture">
                     </center>        
                 </td>
             </center>        

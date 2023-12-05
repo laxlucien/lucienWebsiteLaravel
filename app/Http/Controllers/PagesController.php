@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\users;
 
 class PagesController extends Controller
 {
@@ -24,5 +26,72 @@ class PagesController extends Controller
 
     public function sudoku(){
         return view('pages.sudoku');
+    }
+
+    public function loginError(){
+        return view('pages.loginError');
+    }
+
+    public function profile(){
+        $user = users::all();
+        return view ('pages.profile', compact('user'));
+    }
+
+    public function editUser($id){
+        $user = users::find($id);
+        return view('pages.changeUserInfo', compact('user'));
+    }
+
+    public function updateUser(Request $request, $id){
+        $user = users::find($id);
+        $user->username = $request->input('username');
+        $user->fname = $request->input('fname');
+        $user->lname = $request->input('lname');
+        $user->email = $request->input('email');
+        $user->bio = $request->input('bio');
+        if($request->hasfile('pfp')){
+            $file = $request->file('pfp');
+            $extention = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extention;
+            $file->move('uploads/profiles/', $filename);
+            $user->pfp = $filename;
+        }
+        $user->update();
+
+        return redirect('/profile')->with('status', 'User updated successfully');
+    }
+
+    public function store(Request $request){
+        $user = new users;
+        $user->username = $request->input('username');
+        $user->fname = $request->input('fname');
+        $user->lname = $request->input('lname');
+        $user->email = $request->input('email');
+        $passwordBefore = $request->input('password');
+        $user->password = bcrypt($passwordBefore);
+        $user->save();
+
+        return redirect('/login')->with('status', 'User added successfully');
+    }
+
+    public function checkValid(Request $request){
+        $credentials = $request->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect('/')->with('status', 'You have logged in');
+        }
+
+        return redirect('/loginError')->with('status', 'Error with the login credentials');
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/')->with('status', 'You have logged out');
     }
 }

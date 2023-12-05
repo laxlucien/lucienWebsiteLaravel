@@ -23,4 +23,20 @@ Route::get('/register', 'App\Http\Controllers\PagesController@register');
 
 Route::get('/sudoku', 'App\Http\Controllers\PagesController@sudoku');
 
+Route::get('/loginError', 'App\Http\Controllers\PagesController@loginError');
 
+Route::get('/profile', 'App\Http\Controllers\PagesController@profile');
+
+//for the user to update their information
+Route::get('/changeUserInfo/{id}', [App\Http\Controllers\PagesController::class, 'editUser']);
+Route::get('/updateUserProfile/{id}', [App\Http\Controllers\PagesController::class, 'updateUser']);
+
+
+
+//for the register user data
+Route::post('storeUser', 'App\Http\Controllers\PagesController@store');
+
+//to log in on the user data
+Route::post('authentificateUser', 'App\Http\Controllers\PagesController@checkValid');
+
+Route::post('logout', 'App\Http\Controllers\PagesController@logout');

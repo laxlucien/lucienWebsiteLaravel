@@ -38,6 +38,9 @@ table{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-radius: 8px;
+	align-items: center;
+	align-content: center;
+	position: relative;
 }
 
 img{
@@ -97,4 +100,3 @@ nav{
 h3 {
 	color: white;
 }
-
