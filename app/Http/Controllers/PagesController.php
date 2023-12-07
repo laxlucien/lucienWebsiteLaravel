@@ -42,6 +42,10 @@ class PagesController extends Controller
         return view('pages.changeUserInfo', compact('user'));
     }
 
+    public function photoHome(){
+        return view('pages.photoWall');
+    }
+
     public function updateUser(Request $request, $id){
         $user = users::find($id);
         $user->username = $request->input('username');
@@ -59,6 +63,24 @@ class PagesController extends Controller
         $user->update();
 
         return redirect('/profile')->with('status', 'User updated successfully');
+    }
+
+    public function savePassword(Request $request, $id){
+        $user = users::find($id);
+        if($request->password1 == $request->password2){
+            $passwordBefore = $request->input('password1');
+            $user->password = bcrypt($passwordBefore);
+            $user->save();
+
+            return redirect()->back()->with('status', 'User password has been updated successfully!');
+        }else{
+            return redirect()->back()->with('status', 'ERROR: The inputted passwords did not match!');
+        }
+    }
+
+    public function updatePassword($id){
+        $user = users::find($id);
+        return view('pages.changeUserPassword', compact('user'));
     }
 
     public function store(Request $request){

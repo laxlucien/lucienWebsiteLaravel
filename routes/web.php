@@ -27,16 +27,18 @@ Route::get('/loginError', 'App\Http\Controllers\PagesController@loginError');
 
 Route::get('/profile', 'App\Http\Controllers\PagesController@profile');
 
+//routes for the photo specific function calls
+Route::get('/photoWall', [App\Http\Controllers\PagesController::class, 'photoHome']);
+
 //for the user to update their information
 Route::get('/changeUserInfo/{id}', [App\Http\Controllers\PagesController::class, 'editUser']);
 Route::get('/updateUserProfile/{id}', [App\Http\Controllers\PagesController::class, 'updateUser']);
-
-
+Route::get('/updateUserPassword/{id}', [App\Http\Controllers\PagesController::class, 'updatePassword']);
+Route::get('/saveUserPassword/{id}', [App\Http\Controllers\PagesController::class, 'savePassword']);
 
 //for the register user data
 Route::post('storeUser', 'App\Http\Controllers\PagesController@store');
 
 //to log in on the user data
 Route::post('authentificateUser', 'App\Http\Controllers\PagesController@checkValid');
-
 Route::post('logout', 'App\Http\Controllers\PagesController@logout');

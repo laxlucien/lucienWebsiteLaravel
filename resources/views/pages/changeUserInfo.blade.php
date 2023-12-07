@@ -6,6 +6,8 @@
     <br>
     <h3 style="width: 20%; color: white; background-color: #27272A; padding: 10px; border-radius: 8px;">Change the info for user: {{ Auth::user()->username}} </h3>
     <br>
+    <h3 style="width: 60%; color: white; background-color: #27272A; padding: 10px; border-radius: 8px;">Click <u><a href="{{ url('updateUserPassword/'.$user->id) }}">here</a></u> to change the password for the user: {{ Auth::user()->username}} </h3>
+    <br>
     <form action="{{ url('updateUserProfile/'.$user->id) }}" method="POST" enctype="multipart/form-data" style="background-color: #27272A; padding: 10px; border-radius: 8px; width:60%;">
         @csrf 
         @method('GET')
@@ -45,6 +47,7 @@
         </div>
 
     </form>
+    <br>
 </center>
 
 @endsection
