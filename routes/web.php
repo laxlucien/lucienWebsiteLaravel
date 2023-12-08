@@ -23,7 +23,7 @@ Route::get('/register', 'App\Http\Controllers\PagesController@register');
 
 //routes for the games on the website
 Route::get('/sudoku', 'App\Http\Controllers\PagesController@sudoku');
-Route::get('/fightingGame', 'App\Http\Controllers\PagesController@fightingGame');
+Route::get('/fight', 'App\Http\Controllers\PagesController@fightingGame');
 
 Route::get('/loginError', 'App\Http\Controllers\PagesController@loginError');
 

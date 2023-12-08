@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,15 +10,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
         <style>
-            * {
+            .BitText {
                 box-sizing: border-box;
                 font-family: 'Press Start 2P', cursive;
             }
         </style>
     </head>
     <body>
-            @include(layouts.inc.navbar)
+        @include('layouts.inc.navbar')
 
-            @yield('content')
+        @yield('content')
     </body>
 </html>

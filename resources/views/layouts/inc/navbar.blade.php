@@ -10,7 +10,7 @@
                         <div class="dropbtn" style="padding: 10px;"><h3>Games</h3></div>
                         <div class="dropdown-content">
                             <h3><a href="{{ url('sudoku') }}">Sudoku</a></h3>
-                            <h3><a href="{{ url('fightingGame') }}">Fighting Game</a></h3>
+                            <h3><a href="{{ url('fight') }}">Fighting Game</a></h3>
                         </div>
                     </div>
                     <h3><a href="{{ url('login') }}">Login</a></h3>
@@ -24,7 +24,7 @@
                         <div class="dropbtn" style="padding: 10px;"><h3>Games</h3></div>
                         <div class="dropdown-content">
                             <h3><a href="{{ url('sudoku') }}">Sudoku</a></h3>
-                            <h3><a href="{{ url('fightingGame') }}">Fighting Game</a></h3>
+                            <h3><a href="{{ url('fight') }}">Fighting Game</a></h3>
                         </div>
                     </div>
                     <h3 style="color:white"><a href="{{ url('profile') }}"><u>{{Auth::user()->username}}</u></a></h3>
