@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Lucien's Place For Things</title>
 		<link rel="stylesheet" href="style/mainPage.css">
+		<link rel="stylesheet" href="{{ asset('style/dropdown.css') }}">
 		<script src="JavaScript/mainBackground.js"></script>
 	</head>
     <body>

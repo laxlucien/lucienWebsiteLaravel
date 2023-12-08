@@ -5,6 +5,7 @@
         <title>Lucien's Place for Things</title>
         <link rel="stylesheet" href="style/sudokuStyle.css">
         <link rel="stylesheet" href="style/sudokuNumber.css">
+        <link rel="stylesheet" href="{{ asset('style/dropdown.css') }}">
         <script src="JavaScript/timer.js"></script>
         <script src="JavaScript/sudokuLogic.js"></script>
     </head>

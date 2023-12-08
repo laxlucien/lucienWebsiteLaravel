@@ -46,6 +46,10 @@ class PagesController extends Controller
         return view('pages.photoWall');
     }
 
+    public function fightingGame(){
+        return view('pages.fightingGame');
+    }
+
     public function updateUser(Request $request, $id){
         $user = users::find($id);
         $user->username = $request->input('username');
