@@ -10,7 +10,7 @@
         </h3>
     @else
         <h3 style="width: 60%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
-            Hello {{Auth::user()->username}}, would you like to upload a photo?
+            Hello {{Auth::user()->username}}, would you like to <u><a href="{{ url('addToPhotoWall/'.$user) }}">upload</a></u> a photo?
         </h3>
     @endguest
     <br>

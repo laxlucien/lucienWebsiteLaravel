@@ -44,3 +44,6 @@ Route::post('storeUser', 'App\Http\Controllers\PagesController@store');
 //to log in on the user data
 Route::post('authentificateUser', 'App\Http\Controllers\PagesController@checkValid');
 Route::post('logout', 'App\Http\Controllers\PagesController@logout');
+
+//these routes are going to be for the images, such as refrencing and accessing...
+Route::get('/addToPhotoWall/{id}', [App\Http\Controllers\PhotoController::class, 'uploadPhoto']);

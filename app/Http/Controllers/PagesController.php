@@ -43,7 +43,12 @@ class PagesController extends Controller
     }
 
     public function photoHome(){
-        return view('pages.photoWall');
+        if(Auth::check()){
+            $user = Auth::user()->id;
+            return view('pages.photoWall', compact('user'));
+        }else{
+            return view('pages.photoWall');
+        }
     }
 
     public function fightingGame(){

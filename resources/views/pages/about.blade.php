@@ -5,7 +5,7 @@
 <div>
     <center>
         <br>
-        <h1 style="width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">About -</h1>
+        <h1 style="width: 15%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">About -</h1>
         <br>
         <table>
             <tr>
