@@ -14,6 +14,34 @@
         </h3>
     @endguest
     <br>
+    <?php
+        $i = 0;
+    ?>
+    <table style="width: 90%; background-color: #27272A; padding: 10px; border-radius: 8px;">
+        @foreach ($photo as $var)
+            <?php
+                if($i == 3){
+                    echo "</tr>";
+                    $i = 0;
+                }
+                if($i == 0){
+                    echo "<tr>";
+                }
+            ?>
+
+                <td style="width: 400px; padding: 10px;">
+                    <a href="{{ url('viewPhoto/'.$var->id) }}">
+                        <img style="width: 400px;" src="{{ asset('upload/mainSitePhotos/'.$var->uploadedPhoto) }}">
+                    </a>
+                </td>
+
+            <?php $i += 1; ?>
+        @endforeach
+        <?php
+            echo "</tr>";
+        ?>
+    </table>
+    
 </center>
 
 @endsection

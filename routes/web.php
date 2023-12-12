@@ -30,7 +30,7 @@ Route::get('/loginError', 'App\Http\Controllers\PagesController@loginError');
 Route::get('/profile', 'App\Http\Controllers\PagesController@profile');
 
 //routes for the photo specific function calls
-Route::get('/photoWall', [App\Http\Controllers\PagesController::class, 'photoHome']);
+Route::get('/photoWall', [App\Http\Controllers\PhotoController::class, 'photoHome']);
 
 //for the user to update their information
 Route::get('/changeUserInfo/{id}', [App\Http\Controllers\PagesController::class, 'editUser']);
@@ -47,3 +47,5 @@ Route::post('logout', 'App\Http\Controllers\PagesController@logout');
 
 //these routes are going to be for the images, such as refrencing and accessing...
 Route::get('/addToPhotoWall/{id}', [App\Http\Controllers\PhotoController::class, 'uploadPhoto']);
+Route::post('/storePhotoUpload/{id}', [App\Http\Controllers\PhotoController::class, 'storePhotoUpload']);
+Route::get('/viewPhoto/{id}', [App\Http\Controllers\PhotoController::class, 'viewSelectedPhoto']);

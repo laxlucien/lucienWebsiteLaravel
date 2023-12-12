@@ -42,15 +42,6 @@ class PagesController extends Controller
         return view('pages.changeUserInfo', compact('user'));
     }
 
-    public function photoHome(){
-        if(Auth::check()){
-            $user = Auth::user()->id;
-            return view('pages.photoWall', compact('user'));
-        }else{
-            return view('pages.photoWall');
-        }
-    }
-
     public function fightingGame(){
         return view('pages.fightingGame');
     }
