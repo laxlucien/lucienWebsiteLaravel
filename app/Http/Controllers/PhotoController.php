@@ -58,6 +58,12 @@ class PhotoController extends Controller
 
     public function viewSelectedPhoto($id){
         $photo = photos::find($id);
-        return view('pages.photoPages.viewClosePhoto', compact('photo'));
+        $currentUser = users::where('username', $photo->username) -> first();
+        return view('pages.photoPages.viewClosePhoto', compact('photo'), compact('currentUser'));
+    }
+
+    public function otherUserProfile($id){
+        $requestedUser = users::find($id);
+        return view('pages.viewOtherProfile', compact('requestedUser'));
     }
 }

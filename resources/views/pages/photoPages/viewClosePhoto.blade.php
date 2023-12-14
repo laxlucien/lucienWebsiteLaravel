@@ -9,6 +9,12 @@
                 Selected Photo Information-
             </h1>
         </div>
+        <div style="padding-top: 10px;">
+            <!--- This is for the bottom of the page after they ahve seen all of the users information about the photo --->
+            <h3 style="padding: 10px; color:white; background-color: #27272A; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 80%;">
+                Would you like to see more of this photographers work? Click <a href="{{ url('otherProfile/'.$currentUser->id) }}"><u>here</u></a> in order to see their profile.
+            </h3>
+        </div>
         <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px;">
 
             <!--- this will be the div for the left side of the html doc --->
@@ -18,9 +24,23 @@
                     <h3 style="color: white;"><u>Photo Information:</u></h3>
                 </div>
 
-                <div style="padding: 5px">
+                <div style="padding: 5px; position: relative;">
                     <h3 style="color: white;"><u>Photographer:</u></h3>
-                    <h3 style="color: white;">{{ $photo->username }}</h3>
+                    <div style="display: inline-flex">
+                        <a href="{{ url('otherProfile/'.$currentUser->id) }}">
+                            <h3 style="color: white; padding-right: 15px;">{{ $photo->username }}</h3>
+                        </a>
+                        <?php 
+                            $checkForPfp = $currentUser->pfp;
+                            if(is_null($checkForPfp)){
+                                echo "<img style='border-radius: 8px; width: 45px;' src='{{ asset('photos/default-profile.jpeg') }}' alt='default profile image for a user'>";
+                            }else{
+                                ?>
+                                <img style="border-radius: 8px; width: 45px;" src="{{ asset('uploads/profiles/'.$checkForPfp) }}" alt="image of the photographer">
+                                <?php
+                            }
+                        ?>
+                    </div>
                 </div>
 
                 <div>
@@ -53,6 +73,7 @@
             </div>
 
         </div>
+
     </div>
 </center>
 

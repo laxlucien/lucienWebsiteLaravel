@@ -27,7 +27,9 @@ Route::get('/fight', 'App\Http\Controllers\PagesController@fightingGame');
 
 Route::get('/loginError', 'App\Http\Controllers\PagesController@loginError');
 
+//these are to see user profiles of some sort...
 Route::get('/profile', 'App\Http\Controllers\PagesController@profile');
+Route::get('/otherProfile/{id}', [App\Http\Controllers\PhotoController::class, 'otherUserProfile']);
 
 //routes for the photo specific function calls
 Route::get('/photoWall', [App\Http\Controllers\PhotoController::class, 'photoHome']);
