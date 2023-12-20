@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\users;
 use App\Models\photos;
 
@@ -64,6 +65,12 @@ class PhotoController extends Controller
 
     public function otherUserProfile($id){
         $requestedUser = users::find($id);
-        return view('pages.viewOtherProfile', compact('requestedUser'));
+        $photo = photos::all();
+        //$photo = DB::table('photo_database')
+        //        ->join('users', 'photo_database.username', '=', 'users.username')
+        //        -> where('photo_database.username', '=', 'users.username')
+        //        -> select('photo_database.username', 'photo_database.id', 'photo_database.uploadedPhoto')
+        //        -> get();
+        return view('pages.viewOtherProfile', compact('requestedUser'), compact('photo'));
     }
 }

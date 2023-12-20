@@ -50,5 +50,27 @@
     </table>
     </center>
 </div>
+<br>
+<!--- this is for the hyperlinks at the bottom of the page --->
+<center>
+    <div>
+        <div style=" width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+            <h3>Links to Lucien's Content -</h3>
+        </div>
+        <br>
+        <div style="position: relative; align-items: center; display: inline-flex; width: 40%; color:white; background-color: #27272A; border-radius: 8px; padding:50px;">
+            <div style="display: flex; justify-content: center; padding: 15px; position: absolute; left: 0%">
+                <h3><u>Instagram -</u> <a href="https://www.instagram.com/the_lucien_lee/"><img style="padding-left: 10px; padding-top: 5px; width: 45px;" src="{{ asset('photos/instagram.png') }}"></a></h3>
+            </div>
+            <div style="padding: 15px; position: absolute; left: 40%">
+                <h3><u>LinkedIn -</u>  <a href="https://www.linkedin.com/in/lucien-lee/"><img style="width:50px; padding-left: 10px; padding-top: 5px;" src="{{ asset('photos/linkedIn.png') }}"></a></h3>
+            </div>
+            <div style="padding: 15px; position: absolute; left: 75%">
+                <h3><u>Resume -</u>  <a href="{{ asset('photos/Lucien Lee Computer Science 2023-4.pdf') }}"><img style="width:50px; padding-left: 10px; padding-top: 5px;" src="{{ asset('photos/resume.png') }}"></a></h3>
+            </div>
+        </div>
+    </div>
+</center>
+<br>
 
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\users;
+use App\Models\photos;
 
 class PagesController extends Controller
 {
@@ -34,7 +35,8 @@ class PagesController extends Controller
 
     public function profile(){
         $user = users::all();
-        return view ('pages.profile', compact('user'));
+        $photo = photos::all();
+        return view ('pages.profile', compact('user'), compact('photo'));
     }
 
     public function editUser($id){
