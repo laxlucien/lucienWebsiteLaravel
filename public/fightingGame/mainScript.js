@@ -30,7 +30,7 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: 'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Idle.png',
+    imageSrc: 'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Idle.png',
     frames: 10,
     scale: 2.5,
     offset: {
@@ -39,31 +39,31 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Idle.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Idle.png',
             frames: 10
         },
         run: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Run.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Run.png',
             frames: 10
         },
         jump: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Jump.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Jump.png',
             frames: 3
         },
         fall: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Fall.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Fall.png',
             frames: 3
         },
         attack1: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_Attack.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_Attack.png',
             frames: 4
         },
         takeHit: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_SlideFull.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_SlideFull.png',
             frames: 4
         },
         death: {
-            imageSrc:'fightingGame/Images/Colour1/outline/120x80_PNGSheets/_DeathNoMovement.png',
+            imageSrc:'fightingGame/Images/Colour1/Outline/120x80_PNGSheets/_DeathNoMovement.png',
             frames: 10
         }
     },

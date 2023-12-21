@@ -476,21 +476,14 @@ function selectTile() {
         let r = parseInt(coords[0]);
         let c = parseInt(coords[1]);
         if(!notesEnabled){
+            highlightSelection(coords, this);
             if (solution[r][c] == numSelected.id && solution[r][c] !== board[r][c]) {
                 //add back the correct text
                 this.innerText = numSelected.id;
                 numcorrect--;
                 console.log(numcorrect);
                 //remove all the possible classes
-                this.classList.remove("note-tile-1");
-                this.classList.remove("note-tile-2");
-                this.classList.remove("note-tile-3");
-                this.classList.remove("note-tile-4");
-                this.classList.remove("note-tile-5");
-                this.classList.remove("note-tile-6");
-                this.classList.remove("note-tile-7");
-                this.classList.remove("note-tile-8");
-                this.classList.remove("note-tile-9");
+                this.classList.remove("noteTile");
 
                 //add back the base tile class
                 this.classList.add("tile");
@@ -508,55 +501,64 @@ function selectTile() {
             //window.alert(numSelected.id);
             var hold1 = this.innerText;
             var hold = null;
-            //window.alert(hold);
-            switch(numSelected.id){
-                case '1':
-                    this.classList.add("note-tile-1");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '2':
-                    this.classList.add("note-tile-2");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '3':
-                    this.classList.add("note-tile-3");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '4':
-                    this.classList.add("note-tile-4");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '5':
-                    this.classList.add("note-tile-5");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '6':
-                    this.classList.add("note-tile-6");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '7':
-                    this.classList.add("note-tile-7");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '8':
-                    this.classList.add("note-tile-8");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
-                case '9':
-                    this.classList.add("note-tile-9");
-                    hold = checkIfInNotes(hold1, numSelected.id);
-                    this.innerText = hold;
-                    break;
+            if(this.innerText == solution[r][c]){
+                highlightSelection(coords, this);
+            }else{
+                highlightSelection(coords, this);
+                //window.alert(hold);
+                switch(numSelected.id){
+                    case '1':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '2':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '3':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '4':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '5':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '6':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '7':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '8':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                    case '9':
+                        this.classList.add("noteTile");
+                        hold = checkIfInNotes(hold1, numSelected.id);
+                        this.innerText = hold;
+                        break;
+                }
             }
         }
+    }else{
+        let coords = this.id.split("-"); //["0", "0"]
+        //console.log(coords);
+        highlightSelection(coords, this);
     }
 }
 
@@ -588,4 +590,155 @@ function QuickSort(arr) {
     const strCopy = str.slice(); //compy the string
     const sortedStr = strCopy.split("").sort().join("");
     return sortedStr;
+}
+
+var lastHighlightCoord = null;
+
+function highlightSelection(coord){
+    //coord comes in [0, 0]
+
+    let currentTile = document.getElementById(`${coord[0]}-${coord[1]}`);
+
+    if (lastHighlightCoord !== null) {
+        //lastHighlightTile.classList.remove('highlightSquare');
+        unHighlightX(lastHighlightCoord);
+        unHighlightY(lastHighlightCoord);
+        unhighlightBox(lastHighlightCoord);
+    }
+
+    //currentTile.classList.add('highlightSquare');
+    highlightX(coord);
+    highlightY(coord);
+    highlightBox(coord);
+
+    lastHighlightCoord = coord;
+}
+
+function highlightX(coord){
+    for( let i = 0; i < 9; i++) {
+        let alterTile = document.getElementById(`${coord[0]}-${i}`);
+        alterTile.classList.add('highlightSquare');
+    }
+}
+
+function unHighlightX(coord){
+    for( let i = 0; i < 9; i++){
+        let alterTile = document.getElementById(`${coord[0]}-${i}`);
+        alterTile.classList.remove('highlightSquare');
+    }
+}
+
+function highlightY(coord){
+    for( let i = 0; i < 9; i++){
+        let alterTile = document.getElementById(`${i}-${coord[1]}`);
+        alterTile.classList.add('highlightSquare');
+    }
+}
+
+function unHighlightY(coord){
+    for( let i = 0; i < 9; i++){
+        let alterTile = document.getElementById(`${i}-${coord[1]}`);
+        alterTile.classList.remove('highlightSquare');
+    }
+}
+
+function highlightBox(coord){
+    let x = coord[0];
+    let y = coord[1];
+    //console.log(y);
+    if(y < 3){
+        //this is for the first three x coords
+        //console.log(x);
+        checkForYBox(0, 1, 2, coord);
+    }else if(y < 6){
+        //this is for middle three x coords
+        //console.log('here2');
+        checkForYBox(3, 4, 5, x);
+    }else{
+        //this is for the remaining x coords
+        //console.log('here3');
+        checkForYBox(6, 7, 8, x);
+    }
+}
+
+function checkForYBox(x1, x2, x3, coord){
+    let y = coord[0];
+    //console.log('in the function');
+    if(y < 3){
+        //console.log('here');
+        highlightBoxLogic(0, x1, x2, x3);
+        highlightBoxLogic(1, x1, x2, x3);
+        highlightBoxLogic(2, x1, x2, x3);
+    }else if(y < 6){
+        highlightBoxLogic(3, x1, x2, x3);
+        highlightBoxLogic(4, x1, x2, x3);
+        highlightBoxLogic(5, x1, x2, x3);
+    }else{
+        highlightBoxLogic(6, x1, x2, x3);
+        highlightBoxLogic(7, x1, x2, x3);
+        highlightBoxLogic(8, x1, x2, x3);
+    }
+}
+
+function highlightBoxLogic(x, y1, y2, y3){
+    //console.log(x, y1, y2, y3);
+    let alterTile = document.getElementById(`${x}-${y1}`);
+    alterTile.classList.add('highlightSquare');
+
+    alterTile = document.getElementById(`${x}-${y2}`);
+    alterTile.classList.add('highlightSquare');
+
+    alterTile = document.getElementById(`${x}-${y3}`);
+    alterTile.classList.add('highlightSquare');
+}
+
+function unhighlightBox(coord){
+    let x = coord[0];
+    let y = coord[1];
+    //console.log(y);
+    if(y < 3){
+        //this is for the first three x coords
+        //console.log(x);
+        UncheckForYBox(0, 1, 2, coord);
+    }else if(y < 6){
+        //this is for middle three x coords
+        //console.log('here2');
+        UncheckForYBox(3, 4, 5, x);
+    }else{
+        //this is for the remaining x coords
+        //console.log('here3');
+        UncheckForYBox(6, 7, 8, x);
+    }
+}
+
+function UncheckForYBox(x1, x2, x3, coord){
+    let y = coord[0];
+    //console.log('in the function');
+    if(y < 3){
+        //console.log('here');
+        unhighlightBoxLogic(0, x1, x2, x3);
+        unhighlightBoxLogic(1, x1, x2, x3);
+        unhighlightBoxLogic(2, x1, x2, x3);
+    }else if(y < 6){
+        unhighlightBoxLogic(3, x1, x2, x3);
+        unhighlightBoxLogic(4, x1, x2, x3);
+        unhighlightBoxLogic(5, x1, x2, x3);
+    }else{
+        unhighlightBoxLogic(6, x1, x2, x3);
+        unhighlightBoxLogic(7, x1, x2, x3);
+        unhighlightBoxLogic(8, x1, x2, x3);
+    }
+        
+}
+
+function unhighlightBoxLogic(x, y1, y2, y3){
+    //console.log(x, y1, y2, y3);
+    let alterTile = document.getElementById(`${x}-${y1}`);
+    alterTile.classList.remove('highlightSquare');
+
+    alterTile = document.getElementById(`${x}-${y2}`);
+    alterTile.classList.remove('highlightSquare');
+
+    alterTile = document.getElementById(`${x}-${y3}`);
+    alterTile.classList.remove('highlightSquare');
 }

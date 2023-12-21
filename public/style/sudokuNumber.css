@@ -225,3 +225,22 @@ hr{
     top: 0;
     left: 0;
 }
+
+.noteTile{
+    width: 48px;
+    height: 48px;
+    border: 1px solid lightgrey;
+
+    /*text*/
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: grey;
+}
+
+.highlightSquare{
+    background-color: #7DD3FC;
+}

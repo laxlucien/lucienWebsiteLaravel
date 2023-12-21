@@ -6,8 +6,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style/sudokuStyle.css">
-        <link rel="stylesheet" href="style/sudokuNumber.css">
+        <link rel="stylesheet" href="{{ asset('style/sudokuStyle.css') }}">
+        <link rel="stylesheet" href="{{ asset('style/sudokuNumber.css') }}">
         <link rel="stylesheet" href="{{ asset('style/dropdown.css') }}">
         <script src="JavaScript/timer.js"></script>
         <script src="JavaScript/sudokuLogic.js"></script>
