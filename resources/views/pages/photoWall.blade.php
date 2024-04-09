@@ -3,13 +3,13 @@
 @section('content')
 
 <center>
-    <h1 style="width: 15%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">Photos -</h1>
+    <h1 style="width: 15%;" class="styleBorder">Photos -</h1>
     @guest
-        <h3 style="width: 60%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+        <h3 style="width: 60%;" class="styleBorder">
             Browse the various photos that various people have uploaded to the website below
         </h3>
     @else
-        <h3 style="width: 60%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+        <h3 style="width: 60%;" class="styleBorder">
             Hello {{Auth::user()->username}}, would you like to <u><a href="{{ url('addToPhotoWall/'.$user) }}">upload</a></u> a photo?
         </h3>
     @endguest
@@ -17,7 +17,7 @@
     <?php
         $i = 0;
     ?>
-    <table style="width: 90%; background-color: #27272A; padding: 10px; border-radius: 8px;">
+    <table style="width: 90%;" class="styleBorder">
         @foreach ($photo as $var)
             <?php
                 if($i == 3){

@@ -29,6 +29,10 @@ class PagesController extends Controller
         return view('pages.sudoku');
     }
 
+    public function weather(){
+        return view('pages.weather');
+    }
+
     public function loginError(){
         return view('pages.loginError');
     }

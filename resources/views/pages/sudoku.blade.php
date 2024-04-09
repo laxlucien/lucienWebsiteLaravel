@@ -4,7 +4,7 @@
  <!-- start of the sudoku part -->
  <center>
             <span>
-                <h1 style="width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">Sudoku</h1>
+                <h1 style="width: 20%; color: white; background-color: #0C0A09; border-radius: 8px;">Sudoku</h1>
             </span>
             <hr>
             <table>
@@ -22,7 +22,7 @@
             <br>
             
             <!-- start button -->
-            <div style="width: 30%; background-color: #27272A; padding-top:20px; border-radius: 8px;">
+            <div style="width: 30%; background-color: #0C0A09; padding-top:20px; border-radius: 8px;">
                 <table>
                     <tr>
                         <td><h2 id="errorsTitle">Errors:</h2></td>

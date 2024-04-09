@@ -21,6 +21,8 @@ Route::get('/login', 'App\Http\Controllers\PagesController@login');
 
 Route::get('/register', 'App\Http\Controllers\PagesController@register');
 
+Route::get('/weather', 'App\Http\Controllers\PagesController@weather');
+
 //routes for the games on the website
 Route::get('/sudoku', 'App\Http\Controllers\PagesController@sudoku');
 Route::get('/fight', 'App\Http\Controllers\PagesController@fightingGame');

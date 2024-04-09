@@ -6,7 +6,7 @@
     <br>
     <table>
         <tr>
-            <h3 style="color:white; width: 20%; background-color: #27272A; padding: 10px; border-radius: 8px;">{{ Auth::user()->username}}'s profile</h3> 
+            <h3 style="width: 20%;" class="styleBorder">{{ Auth::user()->username}}'s profile</h3> 
         </tr>
         <tr>
             <td style="width: 40%; color: white">
@@ -24,10 +24,10 @@
             </td>
             <td style="color: white; width: 40%; ">
                 <!--- user info goes here --->
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Username:</u> {{Auth::user()->username}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Name:</u> {{Auth::user()->fname}} {{Auth::user()->lname}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Email:</u> {{Auth::user()->email}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Bio:</u> 
+                <h3 class="styleBorder"> <u>Username:</u> {{Auth::user()->username}}</h3>
+                <h3 class="styleBorder"> <u>Name:</u> {{Auth::user()->fname}} {{Auth::user()->lname}}</h3>
+                <h3 class="styleBorder"> <u>Email:</u> {{Auth::user()->email}}</h3>
+                <h3 class="styleBorder"> <u>Bio:</u> 
                     <?php
                         $checkForBio = Auth::user()->bio;
                         $userName = Auth::user()->username;

@@ -4,7 +4,8 @@
             </div>
             @guest
                 <div class="nav-right flex-div">
-                    <h3 class="navText"><a style="padding: 10px" href="{{ url('about') }}">About</a></h3>
+                    <h3 class="navText"><a href="{{ url('about') }}">About</a></h3>
+                    <h3 class="navText"><a style="padding: 10px" href="{{ url('weather') }}">Weather</a></h3>
                     <h3 class="navText"><a href="{{ url('photoWall') }}">Photos</a></h3>
                     <div class="dropdown">
                         <div class="dropbtn navText" style="padding: 10px;"><h3>Games</h3></div>
@@ -18,7 +19,8 @@
                 </div>
             @else
                 <div class="nav-right flex-div">
-                    <h3 class="navText"><a style="padding: 10px" href="{{ url('about') }}">About</a></h3>
+                    <h3 class="navText"><a href="{{ url('about') }}">About</a></h3>
+                    <h3 class="navText"><a style="padding: 10px" href="{{ url('weather') }}">Weather</a></h3>
                     <h3 class="navText"><a href="{{ url('photoWall') }}">Photos</a></h3>
                     <div class="dropdown">
                         <div class="dropbtn navText" style="padding: 10px;"><h3>Games</h3></div>

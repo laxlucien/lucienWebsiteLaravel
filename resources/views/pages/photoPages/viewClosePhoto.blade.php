@@ -5,13 +5,13 @@
 <center>
     <div style="width: 90%; position: relative; display:inline-block;">
         <div>
-            <h1 style="padding: 10px; color:white; background-color: #27272A; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 40%;">
+            <h1 style="padding: 10px; color:white; background-color: #0C0A09; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 40%;">
                 Selected Photo Information-
             </h1>
         </div>
         <div style="padding-top: 10px;">
             <!--- This is for the bottom of the page after they ahve seen all of the users information about the photo --->
-            <h3 style="padding: 10px; color:white; background-color: #27272A; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 80%;">
+            <h3 style="padding: 10px; color:white; background-color: #0C0A09; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 80%;">
                 Would you like to see more of this photographers work? Click <a href="{{ url('otherProfile/'.$currentUser->id) }}"><u>here</u></a> in order to see their profile.
             </h3>
         </div>
@@ -19,7 +19,7 @@
 
             <!--- this will be the div for the left side of the html doc --->
             <!--- This will have the information for the photo that was selected --->
-            <div style="padding: 20px; color:white; background-color: #27272A; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 25%;">
+            <div style="padding: 20px; color:white; background-color: #0C0A09; border-radius: 8px; position: relative; align-items: center; align-text: center; width: 25%;">
                 <div>
                     <h3 style="color: white;"><u>Photo Information:</u></h3>
                 </div>
@@ -66,7 +66,7 @@
 
             <!--- this will be the div for the right side of the html doc --->
             <!--- This will show the image that was selected as big as possible --->
-            <div style="padding: 20px; color:white; background-color: #27272A; border-radius: 8px; position: relative; align-items: center; width: 75%;">
+            <div style="padding: 20px; color:white; background-color: #0C0A09; border-radius: 8px; position: relative; align-items: center; width: 75%;">
                 <div style="padding: 5px;">
                     <img style="width: 100%;" src="{{ asset('upload/mainSitePhotos/'.$photo->uploadedPhoto) }}" alt="{{ $photo->description }}">
                 </div>

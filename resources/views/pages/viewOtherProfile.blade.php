@@ -6,7 +6,7 @@
     <br>
     <table>
         <tr>
-            <h3 style="color:white; width: 20%; background-color: #27272A; padding: 10px; border-radius: 8px;">{{ $requestedUser->username }}'s profile</h3> 
+            <h3 style="width: 20%;" class="styleBorder">{{ $requestedUser->username }}'s profile</h3> 
         </tr>
         <tr>
             <td style="width: 40%; color: white">
@@ -24,10 +24,10 @@
             </td>
             <td style="color: white; width: 40%; ">
                 <!--- user info goes here --->
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Username:</u> {{$requestedUser->username}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Name:</u> {{$requestedUser->fname}} {{$requestedUser->lname}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Email:</u> {{$requestedUser->email}}</h3>
-                <h3 style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;"> <u>Bio:</u> 
+                <h3 style=class="styleBorder"> <u>Username:</u> {{$requestedUser->username}}</h3>
+                <h3 style=class="styleBorder"> <u>Name:</u> {{$requestedUser->fname}} {{$requestedUser->lname}}</h3>
+                <h3 style=class="styleBorder"> <u>Email:</u> {{$requestedUser->email}}</h3>
+                <h3 style=class="styleBorder"> <u>Bio:</u> 
                     <?php
                         $checkForBio = $requestedUser->bio;
                         $userName = $requestedUser->username;

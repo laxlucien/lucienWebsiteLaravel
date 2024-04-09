@@ -5,14 +5,14 @@
 <div>
     <center>
         <br>
-        <h1 style="width: 15%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">About -</h1>
+        <h1 style="width: 15%;" class="styleBorder">About -</h1>
         <br>
         <table>
             <tr>
                 <center>
-                <td style="color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+                <td class="styleBorder">
                     <center>
-                    <p><h3>About -</h3></p>
+                    <p><h3 style="font-size: 35px;">About -</h3></p>
                     <br>
                     <p>
                         Lucien Lee grew up in Boise Idaho, and attended High School at 
@@ -31,6 +31,15 @@
                     </p>
                     <br>
                     <p>
+                        Lucien's most recent endevor was his Senior Design Project for his Capstone class
+                        at the University of Idaho. This project was comprised of a team of 5 other people, 6
+                        incluing himself. In this project the team - The Irradiated Rascals - worked to provide 
+                        their sponsors at NASA Ames a CubeSat payload that would meaure radiation data in Low Earth Orbit (LEO).
+                        Through this project Lucien has learned a lot about not only space exploration, but also what it takes
+                        to build a space ready payload to accomplish the goal that has been laid out before the team. 
+                    </p>
+                    <br>
+                    <p>
                         I hope you enjoy viewing and using this website just as much as 
                         I enjoyed creating it. If you would like to contribute to this website,
                         feel free to make an account with us, and start uploading your content!
@@ -42,7 +51,7 @@
                 <td style="width:40%">
                     <center>         
                         <!------------ Photo of lucien here --------->
-                        <img style="width:80%; background-color: #27272A; padding: 10px; border-radius: 8px;" src="{{ asset('photos/20220608_160333.jpg') }}" alt="Lucien Profile Picture">
+                        <img stlye="width: 80%;" class="styleBorder" src="{{ asset('photos/20220608_160333.jpg') }}" alt="Lucien Profile Picture">
                     </center>        
                 </td>
             </center>        
@@ -54,11 +63,11 @@
 <!--- this is for the hyperlinks at the bottom of the page --->
 <center>
     <div>
-        <div style=" width: 20%; color:white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+        <div style=" width: 20%;" class="styleBorder">
             <h3>Links to Lucien's Content -</h3>
         </div>
         <br>
-        <div style="position: relative; align-items: center; display: inline-flex; width: 40%; color:white; background-color: #27272A; border-radius: 8px; padding:50px;">
+        <div style="position: relative; align-items: center; display: inline-flex; width: 40%; color:white; background-color: #0C0A09; border-radius: 8px; padding:50px;">
             <div style="display: flex; justify-content: center; padding: 15px; position: absolute; left: 0%">
                 <h3><u>Instagram -</u> <a href="https://www.instagram.com/the_lucien_lee/"><img style="padding-left: 10px; padding-top: 5px; width: 45px;" src="{{ asset('photos/instagram.png') }}"></a></h3>
             </div>

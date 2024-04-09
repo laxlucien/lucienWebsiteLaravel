@@ -3,15 +3,15 @@
 @section('content')
 
 <center>
-    <h2 style="width: 20%; color: white; background-color: #27272A; padding: 10px; border-radius: 8px;">Change password</h2>
+    <h2 style="width: 20%;" class="styleBorder" >Change password</h2>
     <br>
-    <h3 style="width: 60%; color: white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+    <h3 style="width: 60%;" class="styleBorder">
     Careful: Remember your password is vital information! Do not share your password with anyone else and make sure to write it down in a safe location!
     </h3>
     <br>
 
     @if (session('status'))
-        <h3 style="width: 60%; color: white; background-color: #27272A; padding: 10px; border-radius: 8px;">
+        <h3 style="width: 60%;" class="styleBorder">
         {{ session('status') }}
         </h3>
         <br>
